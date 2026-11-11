@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Palm Foundation Kenya — growing hope, empowering people and building stronger communities.">
+  <meta name="theme-color" content="#145c3b">
+  <title>The Palm Foundation Kenya | Growing Hope, Transforming Lives</title>
+  <style>
+    :root{--green:#145c3b;--deep:#0b3927;--lime:#b7d98b;--gold:#e7b85c;--ink:#183329;--muted:#63736b;--paper:#f7faf6;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(10px);border-bottom:1px solid #e6eee8}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;color:var(--green);letter-spacing:.02em}
+    .mark{width:43px;height:43px;border-radius:50% 50% 50% 8px;background:var(--green);display:grid;place-items:center;color:white;font-size:22px;transform:rotate(-8deg)}
+    .brand small{display:block;font-size:10px;letter-spacing:.18em;color:#6d7c72;font-weight:700}
+    nav{display:flex;gap:22px;align-items:center} nav a{text-decoration:none;font-size:13px;font-weight:700;color:#385447}
+    nav a:hover{color:#16824f}.menu{display:none;border:0;background:var(--green);color:#fff;border-radius:8px;padding:9px 12px;font-size:20px}
+    .btn{display:inline-block;text-decoration:none;border-radius:7px;padding:13px 20px;font-weight:700;font-size:14px;background:var(--green);color:#fff;border:2px solid var(--green)}
+    .btn.light{background:#fff;color:var(--green);border-color:#fff}.btn.outline{background:transparent;color:var(--green)}
+    .hero{background:linear-gradient(105deg,#0b3927f2,#145c3bdc),url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=85') center/cover;color:#fff;padding:105px 0 110px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.19em;font-size:11px;font-weight:800;color:var(--gold)}
+    h1{font-size:clamp(40px,6vw,68px);line-height:1.07;max-width:760px;margin:18px 0}
+    .hero p{font-size:18px;max-width:630px;color:#e5eee8;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#dce8df;margin-top:-34px;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 12px 35px #123d2412}
+    .stat{background:#fff;padding:22px;text-align:center}.stat strong{display:block;color:var(--green);font-size:17px}.stat span{font-size:12px;color:var(--muted)}
+    section{padding:82px 0}.soft{background:var(--paper)}.section-head{max-width:680px;margin-bottom:36px}.section-head h2{font-size:clamp(29px,4vw,42px);line-height:1.15;margin:10px 0;color:var(--deep)}.section-head p{color:var(--muted);margin:0}
+    .tag{color:#378252;text-transform:uppercase;font-weight:800;letter-spacing:.16em;font-size:11px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .photo{min-height:390px;border-radius:15px;background:url('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=1000&q=85') center/cover}
+    .checks{padding:0;list-style:none}.checks li{padding:9px 0 9px 28px;position:relative}.checks li:before{content:'✓';position:absolute;left:0;color:#26804b;font-weight:900}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #e5eee7;border-radius:12px;padding:26px;box-shadow:0 8px 24px #143c2208}
+    .ico{width:48px;height:48px;border-radius:12px;background:#eaf4e8;display:grid;place-items:center;font-size:23px}.card h3{margin:16px 0 8px;color:var(--deep)}.card p{color:var(--muted);font-size:14px;margin:0}
+    .impact{background:var(--deep);color:#fff}.impact .section-head h2{color:#fff}.impact .section-head p{color:#d2e2d7}
+    .impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.impact-item{border-left:3px solid var(--gold);padding:5px 0 5px 20px}.impact-item h3{margin:0 0 6px}.impact-item p{margin:0;color:#d2e2d7;font-size:14px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{padding:24px;background:#fff;border-radius:10px;border:1px solid #e5eee7}.number{font-size:12px;color:#398456;font-weight:900;letter-spacing:.12em}
+    .cta{background:linear-gradient(110deg,#eaf4e8,#f8f5e9);border-radius:16px;padding:44px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{margin:0 0 8px;color:var(--deep);font-size:32px}.cta p{margin:0;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact-box{padding:28px;border:1px solid #e4ece5;border-radius:12px}.contact-box p{color:var(--muted)}.contact-line{margin:14px 0}.contact-line b{display:block;color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+    footer{background:#092b1d;color:#d9e6dc;padding:45px 0 20px}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot a{color:#d9e6dc;text-decoration:none}.foot small{color:#9fb6a7}
+    .notice{font-size:12px;color:#718077;margin-top:22px}
+    @media(max-width:800px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e6eee8}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.impact-grid,.steps{grid-template-columns:1fr}.photo{min-height:280px}.cta{display:block;padding:30px}.cta .btn{margin-top:20px}.hero{padding:78px 0 85px}}
+    @media(max-width:480px){.stats{grid-template-columns:1fr}.stat{padding:15px}.hero p{font-size:16px}section{padding:62px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="mark">🌴</span><span>THE PALM FOUNDATION<small>KENYA</small></span></a>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#programs">Our Programs</a><a href="#impact">Our Approach</a><a href="#involved">Get Involved</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#involved">Support Our Work</a>
+    <button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">Community • Dignity • Opportunity</div>
+      <h1>Growing hope.<br>Transforming lives.</h1>
+      <p>The Palm Foundation Kenya is being built around one simple belief: stronger communities begin when people have the opportunity, support and tools to thrive.</p>
+      <div class="actions"><a class="btn light" href="#about">Discover Our Mission</a><a class="btn outline" style="color:#fff;border-color:#ffffffaa" href="#involved">Volunteer With Us</a></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><strong>People-first</strong><span>Putting community voices at the centre</span></div>
+      <div class="stat"><strong>Volunteer-powered</strong><span>Building change through shared effort</span></div>
+      <div class="stat"><strong>Kenya-rooted</strong><span>Working towards stronger local communities</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="photo" role="img" aria-label="Community members working together"></div>
+      <div>
+        <div class="tag">Who we are</div>
+        <h2 style="font-size:38px;line-height:1.15;color:var(--deep)">A foundation for people and possibility.</h2>
+        <p style="color:var(--muted)">The Palm Foundation Kenya is an emerging community-focused non-governmental initiative with an ambition to support people facing social and economic barriers. We aim to listen first, work alongside communities and build practical, locally led solutions.</p>
+        <ul class="checks"><li>Respect, dignity and inclusion for every person</li><li>Community-led and accountable action</li><li>Partnerships that make resources go further</li><li>Practical programmes focused on lasting progress</li></ul>
+        <a class="btn" href="#programs">Explore Our Focus Areas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="programs">
+    <div class="wrap">
+      <div class="section-head"><div class="tag">What we want to do</div><h2>Our programme areas</h2><p>These are proposed focus areas for the foundation. Activities will be confirmed and launched in consultation with communities and partners.</p></div>
+      <div class="cards">
+        <article class="card"><div class="ico">📚</div><h3>Education & Opportunity</h3><p>Encouraging access to learning, mentorship, life skills and opportunities for children and young people.</p></article>
+        <article class="card"><div class="ico">🌱</div><h3>Youth Empowerment</h3><p>Supporting young people with leadership development, skills-building and pathways to meaningful livelihoods.</p></article>
+        <article class="card"><div class="ico">🤝</div><h3>Community Wellbeing</h3><p>Working with local partners to identify needs and connect vulnerable households with appropriate support.</p></article>
+        <article class="card"><div class="ico">💼</div><h3>Livelihoods & Skills</h3><p>Promoting practical skills, entrepreneurship awareness and community-based economic resilience.</p></article>
+        <article class="card"><div class="ico">🛡️</div><h3>Protection & Inclusion</h3><p>Promoting dignity, safety, inclusion and awareness of support pathways for people at risk.</p></article>
+        <article class="card"><div class="ico">🌍</div><h3>Community Development</h3><p>Bringing residents, volunteers, institutions and partners together around locally identified priorities.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact" id="impact">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">How we work</div><h2>Local action. Shared ownership. Lasting change.</h2><p>We intend to grow carefully, transparently and in partnership with the people our work is meant to serve.</p></div>
+      <div class="impact-grid">
+        <div class="impact-item"><h3>Listen to communities</h3><p>Understand priorities and involve local voices before designing activities.</p></div>
+        <div class="impact-item"><h3>Build partnerships</h3><p>Collaborate with community groups, institutions, volunteers and responsible donors.</p></div>
+        <div class="impact-item"><h3>Account for impact</h3><p>Set clear goals, track activities and communicate progress honestly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="involved">
+    <div class="wrap">
+      <div class="section-head"><div class="tag">Be part of the journey</div><h2>There is a place for you in this work.</h2><p>Whether you can offer time, skills, resources or a partnership, your contribution can help build a stronger foundation for community action.</p></div>
+      <div class="steps">
+        <div class="step"><div class="number">01 / VOLUNTEER</div><h3>Give your time</h3><p>Support outreach, community engagement, administration, communications or programme activities.</p></div>
+        <div class="step"><div class="number">02 / PARTNER</div><h3>Work with us</h3><p>Explore collaboration as a community organisation, school, business, institution or civil society partner.</p></div>
+        <div class="step"><div class="number">03 / SUPPORT</div><h3>Contribute resources</h3><p>Discuss responsible ways to support planned activities, essential supplies or programme costs.</p></div>
+      </div>
+      <div class="cta" style="margin-top:35px"><div><h2>Let’s grow hope together.</h2><p>Start a conversation about volunteering, partnership or support.</p></div><a class="btn" href="https://wa.me/254799364171?text=Hello%20The%20Palm%20Foundation%20Kenya%2C%20I%20would%20like%20to%20get%20involved.">Contact us on WhatsApp</a></div>
+    </div>
+  </section>
+
+  <section class="soft" id="contact">
+    <div class="wrap">
+      <div class="section-head"><div class="tag">Get in touch</div><h2>We would love to hear from you.</h2><p>Contact the foundation to discuss volunteering, partnerships, programme ideas or support.</p></div>
+      <div class="contact-grid">
+        <div class="contact-box"><h3>Contact details</h3>
+          <div class="contact-line"><b>Telephone / WhatsApp</b><a href="tel:+254799364171">0799 364 171</a></div>
+          <div class="contact-line"><b>Email</b><span>Official email address to be confirmed</span></div>
+          <div class="contact-line"><b>Location</b><span>Kenya · Community reach to be confirmed</span></div>
+        </div>
+        <div class="contact-box"><h3>Send us a message</h3><p>Use WhatsApp for the quickest way to reach the team while the official email and online enquiry system are being set up.</p><a class="btn" href="https://wa.me/254799364171?text=Hello%2C%20I%20would%20like%20to%20contact%20The%20Palm%20Foundation%20Kenya.">Message the Foundation</a><p class="notice">Please do not send sensitive personal information through public channels.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div style="font-weight:800;color:#fff;font-size:18px">🌴 THE PALM FOUNDATION KENYA</div><p>Growing Hope. Transforming Lives.<br>Building Communities.</p></div>
+      <div><b>Explore</b><p><a href="#about">About us</a><br><a href="#programs">Our programs</a><br><a href="#involved">Get involved</a></p></div>
+      <div><b>Connect</b><p><a href="tel:+254799364171">0799 364 171</a><br><a href="https://wa.me/254799364171">WhatsApp us</a></p></div>
+    </div>
+    <hr style="border:0;border-top:1px solid #315341;margin:25px 0">
+    <small>© <span id="year"></span> The Palm Foundation Kenya. All rights reserved.</small>
+    <p class="notice" style="color:#a9c0b1">Website launch draft. The foundation’s registration status, governance, programme delivery and contact email should be accurately updated before public launch. This website does not claim registration or tax-exempt status.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));</script>
+</body>
+</html>
