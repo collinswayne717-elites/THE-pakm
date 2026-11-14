@@ -32,6 +32,12 @@
     .checks{padding:0;list-style:none}.checks li{padding:9px 0 9px 28px;position:relative}.checks li:before{content:'✓';position:absolute;left:0;color:#26804b;font-weight:900}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #e5eee7;border-radius:12px;padding:26px;box-shadow:0 8px 24px #143c2208}
     .ico{width:48px;height:48px;border-radius:12px;background:#eaf4e8;display:grid;place-items:center;font-size:23px}.card h3{margin:16px 0 8px;color:var(--deep)}.card p{color:var(--muted);font-size:14px;margin:0}
+    .founder-story{background:#fff}
+    .founder-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start}
+    .founder-note{background:linear-gradient(145deg,#eaf4e8,#f8f5e9);border-radius:15px;padding:30px;border-left:4px solid var(--gold)}
+    .founder-note strong{display:block;color:var(--deep);font-size:20px;line-height:1.35}
+    .founder-copy p{color:var(--muted);margin:0 0 16px}
+    .founder-copy .signature{color:var(--green);font-weight:800;margin-top:22px}
     .impact{background:var(--deep);color:#fff}.impact .section-head h2{color:#fff}.impact .section-head p{color:#d2e2d7}
     .impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.impact-item{border-left:3px solid var(--gold);padding:5px 0 5px 20px}.impact-item h3{margin:0 0 6px}.impact-item p{margin:0;color:#d2e2d7;font-size:14px}
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{padding:24px;background:#fff;border-radius:10px;border:1px solid #e5eee7}.number{font-size:12px;color:#398456;font-weight:900;letter-spacing:.12em}
@@ -39,7 +45,7 @@
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact-box{padding:28px;border:1px solid #e4ece5;border-radius:12px}.contact-box p{color:var(--muted)}.contact-line{margin:14px 0}.contact-line b{display:block;color:var(--green);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
     footer{background:#092b1d;color:#d9e6dc;padding:45px 0 20px}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot a{color:#d9e6dc;text-decoration:none}.foot small{color:#9fb6a7}
     .notice{font-size:12px;color:#718077;margin-top:22px}
-    @media(max-width:800px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e6eee8}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.impact-grid,.steps{grid-template-columns:1fr}.photo{min-height:280px}.cta{display:block;padding:30px}.cta .btn{margin-top:20px}.hero{padding:78px 0 85px}}
+    @media(max-width:800px){.founder-grid{grid-template-columns:1fr}nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e6eee8}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.impact-grid,.steps{grid-template-columns:1fr}.photo{min-height:280px}.cta{display:block;padding:30px}.cta .btn{margin-top:20px}.hero{padding:78px 0 85px}}
     @media(max-width:480px){.stats{grid-template-columns:1fr}.stat{padding:15px}.hero p{font-size:16px}section{padding:62px 0}}
   </style>
 </head>
@@ -48,7 +54,7 @@
   <div class="wrap nav">
     <a class="brand" href="#home"><span class="mark">🌴</span><span>THE PALM FOUNDATION<small>KENYA</small></span></a>
     <nav id="nav">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#programs">Our Programs</a><a href="#impact">Our Approach</a><a href="#involved">Get Involved</a><a href="#contact">Contact</a>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#founder">Founder’s Story</a><a href="#programs">Our Programs</a><a href="#impact">Our Approach</a><a href="#involved">Get Involved</a><a href="#contact">Contact</a>
     </nav>
     <a class="btn" href="#involved">Support Our Work</a>
     <button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
@@ -82,6 +88,167 @@
         <p style="color:var(--muted)">The Palm Foundation Kenya is an emerging community-focused non-governmental initiative with an ambition to support people facing social and economic barriers. We aim to listen first, work alongside communities and build practical, locally led solutions.</p>
         <ul class="checks"><li>Respect, dignity and inclusion for every person</li><li>Community-led and accountable action</li><li>Partnerships that make resources go further</li><li>Practical programmes focused on lasting progress</li></ul>
         <a class="btn" href="#programs">Explore Our Focus Areas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder-story soft" id="founder">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="tag">The person behind the purpose</div>
+        <h2>A personal journey shaped by the pursuit of equality and justice.</h2>
+        <p>The values behind The Palm Foundation Kenya are rooted in lived experience, reflection and a belief that every person deserves dignity and fairness.</p>
+      </div>
+      <div class="founder-grid">
+        <div class="founder-note">
+          <strong>“Injustice should never define a person’s future. It should strengthen our resolve to build a fairer one.”</strong>
+          <p>This is the conviction behind The Palm Foundation Kenya: turning difficult experiences into a commitment to dignity, equality, reconciliation and opportunity for all.</p>
+        </div>
+        <div class="founder-copy">
+          <p>My commitment to equality and justice is deeply personal. My family’s experience with a hereditary land injustice involving my father exposed me to the pain and uncertainty that unfair treatment can bring to a family. That experience did not make me want to give up on society; it strengthened my determination to contribute to a future in which people are heard, treated fairly and afforded dignity.</p>
+          <p>While in high school, studying <em>The River Between</em> gave me a greater appreciation of the importance of reconciliation. It encouraged me to think about how communities can address divisions, understand one another and work towards peaceful coexistence.</p>
+          <p>These experiences inspired my interest in studying criminology, with the hope of gaining knowledge that could help me contribute to justice, social understanding and reconciliation. I also hoped, in time, to establish a public relations office through which I could support constructive engagement and address community concerns.</p>
+          <p>However, financial challenges prevented me from continuing my academic studies as I had hoped. Although that interrupted my educational journey, it did not end my commitment to the values that inspired it. Instead, it strengthened my determination to find another way to contribute to society.</p>
+          <p>The Palm Foundation Kenya is part of that determination. It is my response to the belief that painful experiences do not have to become the final chapter of our stories. They can become a reason to serve, to listen and to help build something better. Through this emerging initiative, I hope to promote equality, justice, reconciliation and practical community development—so that injustice does not define another person’s future, and every community has a fairer opportunity to thrive.</p>
+          <p class="signature">The Founder, The Palm Foundation Kenya</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="programs">
+    <div class="wrap">
+      <div class="section-head"><div class="tag">What we want to do</div><h2>Our programme areas</h2><p>These are proposed focus areas for the foundation. Activities will be confirmed and launched in consultation with communities and partners.</p></div>
+      <div class="cards">
+        <article class="card"><div class="ico">📚</div><h3>Education & Opportunity</h3><p>Encouraging access to learning, mentorship, life skills and opportunities for children and young people.</p></article>
+        <article class="card"><div class="ico">🌱</div><h3>Youth Empowerment</h3><p>Supporting young people with leadership development, skills-building and pathways to meaningful livelihoods.</p></article>
+        <article class="card"><div class="ico">🤝</div><h3>Community Wellbeing</h3><p>Working with local partners to identify needs and connect vulnerable households with appropriate support.</p></article>
+        <article class="card"><div class="ico">💼</div><h3>Livelihoods & Skills</h3><p>Promoting practical skills, entrepreneurship awareness and community-based economic resilience.</p></article>
+        <article class="card"><div class="ico">🛡️</div><h3>Protection & Inclusion</h3><p>Promoting dignity, safety, inclusion and awareness of support pathways for people at risk.</p></article>
+        <article class="card"><div class="ico">🌍</div><h3>Community Development</h3><p>Bringing residents, volunteers, institutions and partners together around locally identified priorities.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact" id="impact">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">How we work</div><h2>Local action. Shared ownership. Lasting change.</h2><p>We intend to grow carefully, transparently and in partnership with the people our work is meant to serve.</p></div>
+      <div class="impact-grid">
+        <div class="impact-item"><h3>Listen to communities</h3><p>Understand priorities and involve local voices before designing activities.</p></div>
+        <div class="impact-item"><h3>Build partnerships</h3><p>Collaborate with community groups, institutions, volunteers and responsible donors.</p></div>
+        <div class="impact-item"><h3>Account for impact</h3><p>Set clear goals, track activities and communicate progress honestly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="involved">
+    <div class="wrap">
+      <div class="section-head"><div class="tag">Be part of the journey</div><h2>There is a place for you in this work.</h2><p>Whether you can offer time, skills, resources or a partnership, your contribution can help build a stronger foundation for community action.</p></div>
+      <div class="steps">
+        <div class="step"><div class="number">01 / VOLUNTEER</div><h3>Give your time</h3><p>Support outreach, community engagement, administration, communications or programme activities.</p></div>
+        <div class="step"><div class="number">02 / PARTNER</div><h3>Work with us</h3><p>Explore collaboration as a community organisation, school, business, institution or civil society partner.</p></div>
+        <div class="step"><div class="number">03 / SUPPORT</div><h3>Contribute resources</h3><p>Discuss responsible ways to support planned activities, essential supplies or programme costs.</p></div>
+      </div>
+      <div class="cta" style="margin-top:35px"><div><h2>Let’s grow hope together.</h2><p>Start a conversation about volunteering, partnership or support.</p></div><a class="btn" href="https://wa.me/254799364171?text=Hello%20The%20Palm%20Foundation%20Kenya%2C%20I%20would%20like%20to%20get%20involved.">Contact us on WhatsApp</a></div>
+    </div>
+  </section>
+
+  <section class="soft" id="contact">
+    <div class="wrap">
+      <div class="section-head"><div class="tag">Get in touch</div><h2>We would love to hear from you.</h2><p>Contact the foundation to discuss volunteering, partnerships, programme ideas or support.</p></div>
+      <div class="contact-grid">
+        <div class="contact-box"><h3>Contact details</h3>
+          <div class="contact-line"><b>Telephone / WhatsApp</b><a href="tel:+254799364171">0799 364 171</a></div>
+          <div class="contact-line"><b>Email</b><span>Official email address to be confirmed</span></div>
+          <div class="contact-line"><b>Location</b><span>Kenya · Community reach to be confirmed</span></div>
+        </div>
+        <div class="contact-box"><h3>Send us a message</h3><p>Use WhatsApp for the quickest way to reach the team while the official email and online enquiry system are being set up.</p><a class="btn" href="https://wa.me/254799364171?text=Hello%2C%20I%20would%20like%20to%20contact%20The%20Palm%20Foundation%20Kenya.">Message the Foundation</a><p class="notice">Please do not send sensitive personal information through public channels.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div style="font-weight:800;color:#fff;font-size:18px">🌴 THE PALM FOUNDATION KENYA</div><p>Growing Hope. Transforming Lives.<br>Building Communities.</p></div>
+      <div><b>Explore</b><p><a href="#about">About us</a><br><a href="#programs">Our programs</a><br><a href="#involved">Get involved</a></p></div>
+      <div><b>Connect</b><p><a href="tel:+254799364171">0799 364 171</a><br><a href="https://wa.me/254799364171">WhatsApp us</a></p></div>
+    </div>
+    <hr style="border:0;border-top:1px solid #315341;margin:25px 0">
+    <small>© <span id="year"></span> The Palm Foundation Kenya. All rights reserved.</small>
+    <p class="notice" style="color:#a9c0b1">Website launch draft. The foundation’s registration status, governance, programme delivery and contact email should be accurately updated before public launch. This website does not claim registration or tax-exempt status.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));</script>
+</body>
+</html>nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #e6eee8}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.about-grid,.contact-grid{grid-template-columns:1fr}.cards,.impact-grid,.steps{grid-template-columns:1fr}.photo{min-height:280px}.cta{display:block;padding:30px}.cta .btn{margin-top:20px}.hero{padding:78px 0 85px}}
+    @media(max-width:480px){.stats{grid-template-columns:1fr}.stat{padding:15px}.hero p{font-size:16px}section{padding:62px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="mark">🌴</span><span>THE PALM FOUNDATION<small>KENYA</small></span></a>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#founder">Founder’s Story</a><a href="#programs">Our Programs</a><a href="#impact">Our Approach</a><a href="#involved">Get Involved</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#involved">Support Our Work</a>
+    <button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">Community • Dignity • Opportunity</div>
+      <h1>Growing hope.<br>Transforming lives.</h1>
+      <p>The Palm Foundation Kenya is being built around one simple belief: stronger communities begin when people have the opportunity, support and tools to thrive.</p>
+      <div class="actions"><a class="btn light" href="#about">Discover Our Mission</a><a class="btn outline" style="color:#fff;border-color:#ffffffaa" href="#involved">Volunteer With Us</a></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><strong>People-first</strong><span>Putting community voices at the centre</span></div>
+      <div class="stat"><strong>Volunteer-powered</strong><span>Building change through shared effort</span></div>
+      <div class="stat"><strong>Kenya-rooted</strong><span>Working towards stronger local communities</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="photo" role="img" aria-label="Community members working together"></div>
+      <div>
+        <div class="tag">Who we are</div>
+        <h2 style="font-size:38px;line-height:1.15;color:var(--deep)">A foundation for people and possibility.</h2>
+        <p style="color:var(--muted)">The Palm Foundation Kenya is an emerging community-focused non-governmental initiative with an ambition to support people facing social and economic barriers. We aim to listen first, work alongside communities and build practical, locally led solutions.</p>
+        <ul class="checks"><li>Respect, dignity and inclusion for every person</li><li>Community-led and accountable action</li><li>Partnerships that make resources go further</li><li>Practical programmes focused on lasting progress</li></ul>
+        <a class="btn" href="#programs">Explore Our Focus Areas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder-story soft" id="founder">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="tag">The person behind the purpose</div>
+        <h2>A personal journey shaped by the pursuit of equality and justice.</h2>
+        <p>The values behind The Palm Foundation Kenya are rooted in lived experience, reflection and a belief that every person deserves dignity and fairness.</p>
+      </div>
+      <div class="founder-grid">
+        <div class="founder-note">
+          <strong>“I believe that justice, reconciliation and equal opportunity are essential foundations for stronger communities.”</strong>
+          <p>That belief continues to guide the vision behind this foundation.</p>
+        </div>
+        <div class="founder-copy">
+          <p>My commitment to equality and justice is deeply personal. My family’s experience with a hereditary land injustice involving my father made me reflect on how deeply unfair treatment can affect individuals and families. It strengthened my conviction that people deserve to be heard, treated fairly and afforded dignity.</p>
+          <p>While in high school, studying <em>The River Between</em> gave me a greater appreciation of the importance of reconciliation. It encouraged me to think about how communities can address divisions, understand one another and work towards peaceful coexistence.</p>
+          <p>These experiences inspired my interest in studying criminology, with the hope of gaining knowledge that could help me contribute to justice, social understanding and reconciliation. I also hoped, in time, to establish a public relations office through which I could support constructive engagement and address community concerns.</p>
+          <p>However, financial challenges prevented me from continuing my academic studies as I had hoped. Although that interrupted my educational journey, it did not end my commitment to the values that inspired it. Instead, it strengthened my determination to find another way to contribute to society.</p>
+          <p>The Palm Foundation Kenya is part of that determination. It is an emerging initiative built on the belief that meaningful change begins when people are listened to, their dignity is respected and communities are given opportunities to work together. Through this foundation, I hope to promote equality, justice, reconciliation and practical community development.</p>
+          <p class="signature">The Founder, The Palm Foundation Kenya</p>
+        </div>
       </div>
     </div>
   </section>
